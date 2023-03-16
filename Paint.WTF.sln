@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paint.WTF", "Paint.WTF\Paint.WTF.csproj", "{7D538884-1603-413E-81C5-9665DBE16EDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D538884-1603-413E-81C5-9665DBE16EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D538884-1603-413E-81C5-9665DBE16EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D538884-1603-413E-81C5-9665DBE16EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D538884-1603-413E-81C5-9665DBE16EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D20FA89-C5F8-4944-9398-B4B5A8507D1F}
+	EndGlobalSection
+EndGlobal
