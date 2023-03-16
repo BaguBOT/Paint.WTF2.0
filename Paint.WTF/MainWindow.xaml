@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <InkCanvas x:Name="inkCanvas1" HorizontalAlignment="Left" Height="269" Margin="49,146,0,0" VerticalAlignment="Top" Width="720" Background="White"/>
-        <Button x:Name="Clean" Content="Очистить" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Background="#FFDDDDDD" Height="32" Width="85" Click="Clean_Click" FontSize="16"/>
+        <Button x:Name="Clean" Content="Очистить" HorizontalAlignment="Left" Margin="209,19,0,0" VerticalAlignment="Top" Background="#FFDDDDDD" Height="32" Width="85" Click="Clean_Click" FontSize="16"/>
         <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Height="32" Width="53" Click="exit_Click" FontSize="16"/>
         <Button x:Name="save" Content="Сохранить" HorizontalAlignment="Left" Margin="104,77,0,0" VerticalAlignment="Top" Height="32" Width="85" FontSize="16" Click="save_Click"/>
         <Slider x:Name="sld_RedColor" Background="Red" Minimum="0" Maximum="255" HorizontalAlignment="Left" Margin="521,3,0,0" VerticalAlignment="Top" Width="269" ValueChanged="sld_Color_ValueChanged"/>
@@ -34,7 +34,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="text" Content="Добавить текст" HorizontalAlignment="Left" Margin="37,42,0,0" VerticalAlignment="Top" Height="32" Width="127" FontSize="16" Click="text_Click"/>
+        <Button x:Name="text" Content="Добавить текст" HorizontalAlignment="Left" Margin="152,44,0,0" VerticalAlignment="Top" Height="32" Width="127" FontSize="16" Click="text_Click"/>
         <Button Content="" HorizontalAlignment="Left" Margin="522,63,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Blue" Click="Button_Click"/>
         <Button Content="" HorizontalAlignment="Left" Margin="594,63,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="#FF7F7F7F" Click="Button_Click_3"/>
         <Button Content="" HorizontalAlignment="Left" Margin="570,63,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Red" Click="Button_Click_2"/>
@@ -74,6 +74,7 @@
         <RadioButton Content="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="344,73,0,0" FontSize="16" Checked="RadioButton_Checked_2"/>
         <RadioButton Content="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="344,95,0,0" FontSize="16" Checked="RadioButton_Checked_3"/>
         <RadioButton Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="344,31,0,0" FontSize="16" Checked="RadioButton_Checked"/>
+        <MenuItem Header="MenuItem" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="142" Margin="10,2,0,0"/>
 
     </Grid>
 </Window>
