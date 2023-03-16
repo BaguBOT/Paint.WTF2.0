@@ -72,18 +72,5 @@
                 <MenuItem Header="Exit" Click="MenuItem_Click_4" ></MenuItem>
             </MenuItem>
         </Menu>
-        <ComboBox x:Name="shruft" HorizontalAlignment="Left" Margin="215,47,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ramer" HorizontalAlignment="Left" Margin="111,47,0,0" VerticalAlignment="Top" Width="46"/>
-        <Label Content="Размер шрифта" HorizontalAlignment="Left" Margin="106,21,0,0" VerticalAlignment="Top"/>
-        <Label Content="Изменить шрифт" HorizontalAlignment="Left" Margin="209,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="4.086"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="0.929"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
     </Grid>
 </Window>
