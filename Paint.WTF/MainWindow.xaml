@@ -72,5 +72,7 @@
                 <MenuItem Header="Exit" Click="MenuItem_Click_4" ></MenuItem>
             </MenuItem>
         </Menu>
+
     </Grid>
+    
 </Window>
