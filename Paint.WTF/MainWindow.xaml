@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Paint.WTF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Height="419" VerticalAlignment="Top">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF3456DC" Offset="1"/>
@@ -72,7 +72,8 @@
                 <MenuItem Header="Exit" Click="MenuItem_Click_4" ></MenuItem>
             </MenuItem>
         </Menu>
-
+        <ComboBox Name="cmbFontFamily" SelectionChanged="cmbFontFamily_SelectionChanged" Margin="84,0,564,368" Height="22" VerticalAlignment="Bottom" />
+        <ComboBox Name="cmbFontSize" Width="50" IsEditable="True" TextBoxBase.TextChanged="cmbFontSize_TextChanged" Height="22" Margin="233,0,509,368" VerticalAlignment="Bottom" />
     </Grid>
-    
+
 </Window>

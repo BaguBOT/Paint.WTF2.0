@@ -322,6 +322,9 @@ namespace Paint.WTF
             this.inkCanvas1.DefaultDrawingAttributes.Color = clr;
         }
 
-       
+        private void cmbFontFamily_SelectionChanged()
+        {
+
+        }
     }
 }
