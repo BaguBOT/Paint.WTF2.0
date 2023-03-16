@@ -32,34 +32,14 @@ namespace Paint.WTF
             this.lbl1.Background = new SolidColorBrush(Color.FromRgb(mcolor.red, mcolor.green, mcolor.blue));
         }
 
-        private void Clean_Click(object sender, RoutedEventArgs e)
-        {
-            this.inkCanvas1.Strokes.Clear();
-        }
+ 
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void save_Click(object sender, RoutedEventArgs e)
-        {
-            this.inkCanvas1.EditingMode = InkCanvasEditingMode.None;
-            string imgPath = @"C:\"; 
-            MemoryStream ms = new MemoryStream();  
-            FileStream fs = new FileStream(imgPath, FileMode.Create);
-
-            //rtb - объект класса RenderTargetBitmap
-            RenderTargetBitmap rtb = new RenderTargetBitmap((int)inkCanvas1.Width, (int)inkCanvas1.Height, 96, 96, PixelFormats.Default);
-            rtb.Render(inkCanvas1);
-
-            GifBitmapEncoder gifEnc = new GifBitmapEncoder(); 
-            gifEnc.Frames.Add(BitmapFrame.Create(rtb));
-            gifEnc.Save(fs);
-            fs.Close();
-            this.inkCanvas1.EditingMode = InkCanvasEditingMode.Ink;
-            MessageBox.Show("Файл сохранен, " + imgPath); //Для информации
-        }
+     
         public class ColorRGB
         {
             public byte red { get; set; }
@@ -95,29 +75,6 @@ namespace Paint.WTF
             this.lbl1.Background = new SolidColorBrush(Color.FromRgb(mcolor.red, mcolor.green, mcolor.blue));
             // Задаем цвет кисти для контрола InkCanvas
             this.inkCanvas1.DefaultDrawingAttributes.Color = clr;
-        }
-
-   
-        private void Select_Click(object sender, RoutedEventArgs e)
-        {
-            this.inkCanvas1.EditingMode = InkCanvasEditingMode.Select;
-        }
-
-        private void text_Click(object sender, RoutedEventArgs e)
-        {
-            //Инициализация контрола tb типа TextBox
-            TextBox tb = new TextBox
-            {
-                Width = 100,
-                Height = 50,
-                BorderThickness = new Thickness(1),
-                BorderBrush = new SolidColorBrush(Color.FromRgb(5, 5, 5)),
-                Margin = new Thickness(20, 20, 0, 0)
-            };
-            //Добавление контрола tb
-            this.inkCanvas1.Children.Add(tb);
-            //Переключение фокуса на элемент, чтоб можно было сразу ввести текст с клавиатуры
-            tb.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -303,5 +260,68 @@ namespace Paint.WTF
             this.inkCanvas1.DefaultDrawingAttributes.Width = 20;
             this.inkCanvas1.DefaultDrawingAttributes.Height = 20;
         }
+
+
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.inkCanvas1.Strokes.Clear();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.inkCanvas1.EditingMode = InkCanvasEditingMode.None;
+            string imgPath = @"D:\file.png";
+            MemoryStream ms = new MemoryStream();
+            FileStream fs = new FileStream(imgPath, FileMode.Create);
+
+            //rtb - объект класса RenderTargetBitmap
+            RenderTargetBitmap rtb = new RenderTargetBitmap((int)inkCanvas1.Width, (int)inkCanvas1.Height, 96, 96, PixelFormats.Default);
+            rtb.Render(inkCanvas1);
+
+            GifBitmapEncoder gifEnc = new GifBitmapEncoder();
+            gifEnc.Frames.Add(BitmapFrame.Create(rtb));
+            gifEnc.Save(fs);
+            fs.Close();
+            this.inkCanvas1.EditingMode = InkCanvasEditingMode.Ink;
+            MessageBox.Show("Файл сохранен, " + imgPath); //Для информации
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            //Инициализация контрола tb типа TextBox
+            TextBox tb = new TextBox
+            {
+                Width = 100,
+                Height = 50,
+                BorderThickness = new Thickness(1),
+                BorderBrush = new SolidColorBrush(Color.FromRgb(5, 5, 5)),
+                Margin = new Thickness(20, 20, 0, 0)
+            };
+            //Добавление контрола tb
+            this.inkCanvas1.Children.Add(tb);
+            //Переключение фокуса на элемент, чтоб можно было сразу ввести текст с клавиатуры
+            tb.Focus();
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.inkCanvas1.EditingMode = InkCanvasEditingMode.Select;
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            this.inkCanvas1.DefaultDrawingAttributes.Width = 5;
+            this.inkCanvas1.DefaultDrawingAttributes.Height = 5;
+            this.lbl1.Background = new SolidColorBrush(Color.FromRgb(mcolor.red, mcolor.green, mcolor.blue));
+            this.inkCanvas1.DefaultDrawingAttributes.Color = clr;
+        }
+
+       
     }
 }
