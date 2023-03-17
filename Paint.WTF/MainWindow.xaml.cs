@@ -30,8 +30,7 @@ namespace Paint.WTF
             mcolor.green = 0;
             mcolor.blue = 0;
             this.lbl1.Background = new SolidColorBrush(Color.FromRgb(mcolor.red, mcolor.green, mcolor.blue));
-            cmbFontFamily.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
-            cmbFontSize.ItemsSource = new List<double>() { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 };
+          
         }
 
     
@@ -304,7 +303,7 @@ namespace Paint.WTF
             this.inkCanvas1.Children.Add(tb);
             //Переключение фокуса на элемент, чтоб можно было сразу ввести текст с клавиатуры
             tb.Focus();
-            if (cmbFontFamily.SelectedItem != null)
+           
           
         }
 
