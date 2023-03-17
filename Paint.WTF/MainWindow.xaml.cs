@@ -30,9 +30,11 @@ namespace Paint.WTF
             mcolor.green = 0;
             mcolor.blue = 0;
             this.lbl1.Background = new SolidColorBrush(Color.FromRgb(mcolor.red, mcolor.green, mcolor.blue));
+            cmbFontFamily.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
+            cmbFontSize.ItemsSource = new List<double>() { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72 };
         }
 
- 
+    
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
@@ -286,7 +288,7 @@ namespace Paint.WTF
             this.inkCanvas1.EditingMode = InkCanvasEditingMode.Ink;
             MessageBox.Show("Файл сохранен, " + imgPath); //Для информации
         }
-
+     
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
             //Инициализация контрола tb типа TextBox
@@ -302,6 +304,8 @@ namespace Paint.WTF
             this.inkCanvas1.Children.Add(tb);
             //Переключение фокуса на элемент, чтоб можно было сразу ввести текст с клавиатуры
             tb.Focus();
+            if (cmbFontFamily.SelectedItem != null)
+          
         }
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
